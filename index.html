@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3f4a76">
+  <meta name="description" content="宠托记内测预览：独立宠托师的私单工作台，快速建档、记录上门照护并生成微信日报。">
+  <meta name="robots" content="noindex,nofollow">
+  <title>宠托记 · 独立宠托师工作台</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <a class="brand" href="#home" data-view="home" aria-label="宠托记首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img"><ellipse cx="12.5" cy="19" rx="4.1" ry="5.5" fill="#f06b67"/><ellipse cx="35.5" cy="19" rx="4.1" ry="5.5" fill="#f5c747"/><ellipse cx="20" cy="12.5" rx="4.1" ry="5.8" fill="#38bfc1"/><ellipse cx="30.5" cy="11.5" rx="4" ry="5.6" fill="#7b84c5"/><path d="M24 26c-5.8 0-11 4.5-11 9.3 0 3.1 2.3 5.7 5.5 5.7 2 0 3.4-.8 5.5-.8s3.5.8 5.5.8c3.2 0 5.5-2.6 5.5-5.7C35 30.5 29.8 26 24 26Z" fill="#3f4a76"/></svg>
+        </span>
+        <span>
+          <strong>宠托记</strong>
+          <small>独立宠托师工作台</small>
+        </span>
+      </a>
+
+      <nav class="side-nav">
+        <button class="nav-item active" type="button" data-view="home">
+          <span class="nav-icon" data-icon="home"></span><span>工作台</span>
+        </button>
+        <button class="nav-item" type="button" data-view="orders">
+          <span class="nav-icon" data-icon="clipboard"></span><span>服务单</span>
+        </button>
+        <button class="nav-item" type="button" data-view="settings">
+          <span class="nav-icon" data-icon="settings"></span><span>设置与备份</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="local-note">
+          <span class="status-dot"></span>
+          <div><strong>仅保存在本机</strong><small>不上传宠物与主人资料</small></div>
+        </div>
+        <span class="version">MVP 0.1</span>
+      </div>
+    </aside>
+
+    <div class="content-shell">
+      <header class="desktop-topbar">
+        <div class="topbar-context" id="topbarContext">工作台</div>
+        <div class="topbar-user">
+          <span class="topbar-date" id="topbarDate"></span>
+          <span class="topbar-divider"></span>
+          <span class="topbar-avatar" id="topbarAvatar">宠</span>
+          <span class="topbar-name" id="topbarName">宠托师</span>
+        </div>
+      </header>
+
+      <header class="mobile-topbar">
+        <a class="brand compact" href="#home" data-view="home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img"><ellipse cx="12.5" cy="19" rx="4.1" ry="5.5" fill="#f06b67"/><ellipse cx="35.5" cy="19" rx="4.1" ry="5.5" fill="#f5c747"/><ellipse cx="20" cy="12.5" rx="4.1" ry="5.8" fill="#38bfc1"/><ellipse cx="30.5" cy="11.5" rx="4" ry="5.6" fill="#7b84c5"/><path d="M24 26c-5.8 0-11 4.5-11 9.3 0 3.1 2.3 5.7 5.5 5.7 2 0 3.4-.8 5.5-.8s3.5.8 5.5.8c3.2 0 5.5-2.6 5.5-5.7C35 30.5 29.8 26 24 26Z" fill="#3f4a76"/></svg>
+          </span>
+          <strong>宠托记</strong>
+        </a>
+        <div class="mobile-top-actions">
+          <span class="mobile-avatar" id="mobileAvatar">宠</span>
+          <button class="icon-btn primary" id="mobileNewOrder" type="button" aria-label="新建服务单">
+            <span data-icon="plus"></span>
+          </button>
+        </div>
+      </header>
+
+      <main id="mainContent" class="main-content" tabindex="-1">
+        <div class="boot-state">
+          <span class="spinner"></span>
+          <p>正在打开工作台…</p>
+        </div>
+      </main>
+    </div>
+
+    <nav class="bottom-nav" aria-label="移动端主导航">
+      <button class="bottom-nav-item active" type="button" data-view="home"><span data-icon="home"></span><small>工作台</small></button>
+      <button class="bottom-nav-item" type="button" data-view="orders"><span data-icon="clipboard"></span><small>服务单</small></button>
+      <button class="bottom-nav-item" type="button" data-view="settings"><span data-icon="settings"></span><small>设置</small></button>
+    </nav>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript">宠托记需要启用 JavaScript 才能使用。</div></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

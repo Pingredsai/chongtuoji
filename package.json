@@ -1,0 +1,10 @@
+{
+  "name": "chongtuoji-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "独立宠托师的私单工作台 MVP",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}
