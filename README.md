@@ -2,6 +2,8 @@
 
 > 独立宠托师的微信私单工作台。当前为内测预览，不对搜索引擎公开。
 
+预览地址：https://pingredsai.github.io/chongtuoji/
+
 功能：
 
 - 服务单和宠物档案
