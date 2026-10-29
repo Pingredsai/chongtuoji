@@ -179,9 +179,7 @@ export async function buildReportCard(order, report, profile) {
   if (order.pet?.photo) {
     try {
       const image = await loadImage(order.pet.photo);
-      ctx.filter = 'grayscale(1)';
       drawImageCover(ctx, image, 0, 0, W, heroHeight);
-      ctx.filter = 'none';
       const overlay = ctx.createLinearGradient(0, 80, 0, heroHeight);
       overlay.addColorStop(0, 'rgba(20,31,46,.18)');
       overlay.addColorStop(.48, 'rgba(20,31,46,.28)');
@@ -302,9 +300,7 @@ export async function buildReportCard(order, report, profile) {
         ctx.beginPath();
         ctx.rect(x, photoY, photoW, 128);
         ctx.clip();
-        ctx.filter = 'grayscale(1)';
         drawImageCover(ctx, image, x, photoY, photoW, 128);
-        ctx.filter = 'none';
         ctx.restore();
       } catch (error) {
         console.warn('Could not draw report photo', error);

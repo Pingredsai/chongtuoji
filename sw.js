@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chongtuoji-mvp-v6';
+const CACHE_NAME = 'chongtuoji-mvp-v7';
 const APP_SHELL = [
   './',
   './index.html',

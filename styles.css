@@ -14,10 +14,10 @@
   --coral: #2b2b29;
   --coral-dark: #000000;
   --coral-soft: #efefeb;
-  --teal: #4a4a46;
+  --teal: #38bfc1;
   --teal-soft: #ededE9;
-  --sun: #c8c8c2;
-  --amber: #6e6e68;
+  --sun: #f5c747;
+  --amber: #d5a11e;
   --amber-soft: #f0f0ec;
   --red: #4b4b47;
   --red-soft: #ededE9;
@@ -180,10 +180,12 @@ img { display: block; max-width: 100%; }
 .service-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .service-card-top h3 { margin: 0; color: var(--text); font-size: 16px; font-weight: 740; letter-spacing: -.02em; }
 .service-card-top p { margin: 2px 0 0; color: var(--muted); font-size: 10px; }
-.status-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 999px; color: var(--teal); background: var(--teal-soft); font-size: 9px; font-weight: 700; white-space: nowrap; }
-.status-pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
-.status-pill.upcoming { color: var(--amber); background: var(--amber-soft); }
-.status-pill.completed { color: var(--muted); background: #eef1f4; }
+.status-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 999px; color: var(--text-soft); background: #ededE9; font-size: 9px; font-weight: 700; white-space: nowrap; }
+.status-pill::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+.status-pill.upcoming { color: var(--text-soft); background: var(--amber-soft); }
+.status-pill.upcoming::before { background: var(--amber); }
+.status-pill.completed { color: var(--muted); background: #eef0ee; }
+.status-pill.completed::before { background: #a7a7a1; }
 .status-pill.draft { color: var(--text-soft); background: #eef1f4; }
 .service-card-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 15px; }
 .service-card-details span { display: block; color: var(--muted); font-size: 9px; }
@@ -431,6 +433,6 @@ img { display: block; max-width: 100%; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-/* Editorial monochrome photography */
+/* Full-color photography inside a monochrome product shell */
 .service-photo, .detail-photo, .schedule-photo, .activity-photo,
-.welcome-main-photo, .welcome-thumb, .report-photos img { filter: grayscale(1); }
+.welcome-main-photo, .welcome-thumb, .report-photos img { filter: none; }
