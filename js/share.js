@@ -160,11 +160,11 @@ export async function buildReportCard(order, report, profile) {
   const ctx = canvas.getContext('2d');
   const W = canvas.width;
   const H = canvas.height;
-  const navy = '#3f4a76';
-  const ink = '#303552';
-  const muted = '#858ca1';
-  const line = '#e3e6ef';
-  const paper = '#f7f8fb';
+  const navy = '#2f5a4f';
+  const ink = '#26352f';
+  const muted = '#7c8984';
+  const line = '#e2e7e3';
+  const paper = '#f7f8f5';
   const white = '#ffffff';
   const coral = '#f06b67';
   const teal = '#38bfc1';
