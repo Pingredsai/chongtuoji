@@ -160,15 +160,15 @@ export async function buildReportCard(order, report, profile) {
   const ctx = canvas.getContext('2d');
   const W = canvas.width;
   const H = canvas.height;
-  const navy = '#234a63';
-  const ink = '#22333d';
-  const muted = '#7d8d96';
-  const line = '#e1e7ea';
-  const paper = '#f6f8f9';
+  const navy = '#151515';
+  const ink = '#1d1d1b';
+  const muted = '#888882';
+  const line = '#e2e2dd';
+  const paper = '#f5f5f2';
   const white = '#ffffff';
-  const coral = '#f06b67';
-  const teal = '#38bfc1';
-  const sun = '#f5c747';
+  const coral = '#2b2b29';
+  const teal = '#777772';
+  const sun = '#c8c8c2';
 
   ctx.fillStyle = paper;
   ctx.fillRect(0, 0, W, H);
@@ -179,7 +179,9 @@ export async function buildReportCard(order, report, profile) {
   if (order.pet?.photo) {
     try {
       const image = await loadImage(order.pet.photo);
+      ctx.filter = 'grayscale(1)';
       drawImageCover(ctx, image, 0, 0, W, heroHeight);
+      ctx.filter = 'none';
       const overlay = ctx.createLinearGradient(0, 80, 0, heroHeight);
       overlay.addColorStop(0, 'rgba(20,31,46,.18)');
       overlay.addColorStop(.48, 'rgba(20,31,46,.28)');
@@ -267,7 +269,7 @@ export async function buildReportCard(order, report, profile) {
   });
 
   const moodY = gridY + cellH * 2 + 20;
-  ctx.fillStyle = '#fff0ef';
+  ctx.fillStyle = '#efefeb';
   ctx.fillRect(gridX, moodY, gridW, 76);
   ctx.fillStyle = coral;
   ctx.font = '600 16px "Microsoft YaHei", sans-serif';
@@ -300,14 +302,16 @@ export async function buildReportCard(order, report, profile) {
         ctx.beginPath();
         ctx.rect(x, photoY, photoW, 128);
         ctx.clip();
+        ctx.filter = 'grayscale(1)';
         drawImageCover(ctx, image, x, photoY, photoW, 128);
+        ctx.filter = 'none';
         ctx.restore();
       } catch (error) {
         console.warn('Could not draw report photo', error);
       }
     }
   } else {
-    ctx.fillStyle = '#eef0f7';
+    ctx.fillStyle = '#ededE9';
     ctx.fillRect(64, extraY, 952, 96);
     const summary = [
       ['服务日期', formatDate(report.date, { long: true })],

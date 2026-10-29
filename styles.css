@@ -1,26 +1,26 @@
 :root {
-  --canvas: #f6f8f9;
+  --canvas: #f5f5f2;
   --surface: #ffffff;
-  --surface-soft: #f8f9fb;
-  --surface-blue: #eff4f6;
-  --navy: #234a63;
-  --navy-dark: #183a50;
-  --navy-soft: #e7eff4;
-  --text: #22333d;
-  --text-soft: #546874;
-  --muted: #7d8d96;
-  --line: #e1e7ea;
-  --line-strong: #d2dbe1;
-  --coral: #f06b67;
-  --coral-dark: #d95a56;
-  --coral-soft: #fff0ef;
-  --teal: #38bfc1;
-  --teal-soft: #e3f8f8;
-  --sun: #f5c747;
-  --amber: #d8a11f;
-  --amber-soft: #fff7db;
-  --red: #b94b44;
-  --red-soft: #fcecea;
+  --surface-soft: #f7f7f4;
+  --surface-blue: #f0f0ed;
+  --navy: #151515;
+  --navy-dark: #000000;
+  --navy-soft: #e9e9e5;
+  --text: #1d1d1b;
+  --text-soft: #5d5d58;
+  --muted: #888882;
+  --line: #e2e2dd;
+  --line-strong: #cecec8;
+  --coral: #2b2b29;
+  --coral-dark: #000000;
+  --coral-soft: #efefeb;
+  --teal: #4a4a46;
+  --teal-soft: #ededE9;
+  --sun: #c8c8c2;
+  --amber: #6e6e68;
+  --amber-soft: #f0f0ec;
+  --red: #4b4b47;
+  --red-soft: #ededE9;
   --shadow-xs: 0 1px 2px rgba(20, 31, 46, .04);
   --shadow-sm: 0 4px 14px rgba(20, 31, 46, .05);
   --shadow-md: 0 16px 40px rgba(20, 31, 46, .12);
@@ -72,7 +72,7 @@ img { display: block; max-width: 100%; }
 .version { padding-left: 5px; color: #9aa4b2; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; }
 .content-shell { min-height: 100vh; margin-left: var(--sidebar); }
 .desktop-topbar { position: sticky; top: 0; z-index: 25; height: 62px; display: flex; align-items: center; justify-content: space-between; padding: 0 36px; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
-.desktop-topbar::before, .mobile-topbar::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--teal) 0 26%, var(--sun) 26% 48%, var(--coral) 48% 72%, var(--navy) 72% 100%); }
+.desktop-topbar::before, .mobile-topbar::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, #111 0 25%, #444 25% 50%, #888 50% 75%, #ccc 75% 100%); }
 .topbar-context { color: var(--navy); font-size: 12px; font-weight: 700; letter-spacing: .02em; }
 .topbar-user { display: flex; align-items: center; gap: 11px; color: var(--muted); font-size: 11px; }
 .topbar-divider { width: 1px; height: 18px; background: var(--line); }
@@ -136,7 +136,7 @@ img { display: block; max-width: 100%; }
 .schedule-state { padding: 4px 8px; border-radius: 999px; color: var(--amber); background: var(--amber-soft); font-size: 9px; font-weight: 700; white-space: nowrap; }
 .schedule-state.done { color: var(--teal); background: var(--teal-soft); }
 .todo-panel { position: relative; overflow: hidden; padding: 22px; border-radius: var(--radius); color: #fff; background: var(--navy); box-shadow: var(--shadow-sm); }
-.todo-panel::after { content: ""; position: absolute; width: 120px; height: 120px; right: -45px; bottom: -50px; border-radius: 50%; background: rgba(56,191,193,.18); }
+.todo-panel::after { content: ""; position: absolute; width: 120px; height: 120px; right: -45px; bottom: -50px; border-radius: 50%; background: rgba(255,255,255,.08); }
 .todo-panel-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 .todo-panel-top span { color: rgba(255,255,255,.68); font-size: 11px; }
 .todo-panel-top strong { color: #fff; font-size: 34px; line-height: 1; font-weight: 750; letter-spacing: -.04em; }
@@ -159,13 +159,13 @@ img { display: block; max-width: 100%; }
 .welcome-proof { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; color: var(--muted); font-size: 10px; }
 .welcome-proof span { display: inline-flex; align-items: center; gap: 6px; }
 .welcome-proof svg { width: 14px; height: 14px; stroke: var(--teal); fill: none; stroke-width: 1.8; }
-.welcome-visual { position: relative; min-height: 520px; max-height: 560px; overflow: hidden; background: #edf3f7; }
+.welcome-visual { position: relative; min-height: 520px; max-height: 560px; overflow: hidden; background: #eeeeea; }
 .welcome-main-photo { position: absolute; inset: 44px 42px 42px 76px; width: calc(100% - 118px); height: calc(100% - 86px); object-fit: cover; border-radius: 20px; box-shadow: 0 16px 34px rgba(48,53,82,.14); }
 .welcome-thumb { position: absolute; z-index: 2; object-fit: cover; border: 5px solid #fff; border-radius: 16px; box-shadow: 0 10px 24px rgba(48,53,82,.14); }
 .welcome-thumb.dog { width: 122px; height: 122px; left: 20px; bottom: 76px; transform: rotate(-5deg); }
 .welcome-thumb.cat { width: 104px; height: 104px; right: 18px; top: 20px; transform: rotate(6deg); }
-.welcome-visual::before { content: ""; position: absolute; width: 260px; height: 260px; left: -90px; top: -90px; border: 34px solid rgba(56,191,193,.3); border-radius: 50%; }
-.welcome-visual::after { content: ""; position: absolute; width: 96px; height: 96px; right: -22px; bottom: 44px; border-radius: 50%; background: rgba(245,199,71,.55); }
+.welcome-visual::before { content: ""; position: absolute; width: 260px; height: 260px; left: -90px; top: -90px; border: 34px solid rgba(0,0,0,.07); border-radius: 50%; }
+.welcome-visual::after { content: ""; position: absolute; width: 96px; height: 96px; right: -22px; bottom: 44px; border-radius: 50%; background: rgba(0,0,0,.08); }
 .photo-caption { position: absolute; left: 22px; right: 22px; bottom: 22px; padding: 14px 16px; border-radius: 10px; color: #fff; background: rgba(23,36,53,.78); backdrop-filter: blur(10px); }
 .photo-caption span { display: block; color: rgba(255,255,255,.68); font-size: 9px; }
 .photo-caption strong { display: block; margin-top: 2px; font-size: 13px; }.service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
@@ -430,3 +430,7 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Editorial monochrome photography */
+.service-photo, .detail-photo, .schedule-photo, .activity-photo,
+.welcome-main-photo, .welcome-thumb, .report-photos img { filter: grayscale(1); }
